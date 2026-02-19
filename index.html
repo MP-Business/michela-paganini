@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michela Paganini | Percorso e Innovazione</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -50,13 +51,17 @@
         .bg-subtle-gradient {
             background: linear-gradient(180deg, #faf9f6 0%, #f3d5c0 100%);
         }
+
+        /* Smooth scroll per i link interni */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body class="text-slate-800">
 
-    <!-- Navigazione Minimal -->
-    <nav class="fixed w-full z-50 py-6 px-10 flex justify-between items-center mix-blend-difference text-white">
-        <span class="text-lg font-light tracking-[0.3em] uppercase">M. Paganini</span>
+    <!-- Navigazione Minimal Rielaborata -->
+    <nav class="absolute w-full z-50 py-8 px-10 flex justify-end items-center text-white/70">
         <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-widest">
             <a href="#storia" class="hover:text-brand-gold transition">Il percorso</a>
             <a href="#formazione" class="hover:text-brand-gold transition">Formazione</a>
@@ -69,10 +74,18 @@
     <section class="min-h-screen flex items-center pt-20 pb-10 bg-brand-dark overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             
-            <!-- Foto a Mezzobusto / Figura Intera -->
-            <div class="order-2 md:order-1 photo-frame fade-in">
-                <img src="michela-paganini.jpg" alt="Michela Paganini" 
-                     class="relative z-10 w-full max-w-md mx-auto shadow-2xl grayscale hover:grayscale-0 transition duration-1000 object-cover rounded-sm border border-white/10">
+            <!-- Colonna Foto con Nome in alto a sinistra -->
+            <div class="order-2 md:order-1 fade-in">
+                <!-- Nome posizionato sopra la foto -->
+                <div class="mb-6">
+                    <span class="text-brand-gold text-2xl font-light tracking-[0.3em] uppercase block mb-1">Michela</span>
+                    <span class="text-white text-3xl serif italic tracking-widest block pl-8">Paganini</span>
+                </div>
+                
+                <div class="photo-frame">
+                    <img src="michela-paganini.jpg" alt="Michela Paganini" 
+                         class="relative z-10 w-full max-w-md mx-auto shadow-2xl transition duration-1000 object-cover rounded-sm border border-white/10">
+                </div>
             </div>
 
             <!-- Testo Introspettivo -->
@@ -82,7 +95,7 @@
                     <span class="italic text-brand-gold">tra ieri e domani.</span>
                 </h1>
                 <p class="text-xl text-brand-peach/80 font-light max-w-lg mb-10 leading-relaxed">
-                    Dalla solidit‡ di 19 anni nella logistica internazionale all'agilit‡ delle nuove tecnologie. Un percorso fatto di precisione, ascolto e continua evoluzione.
+                    Dalla solidit√† di 19 anni come responsabile back office e logistica internazionale all'agilit√† delle nuove tecnologie. Un percorso fatto di precisione, ascolto e continua evoluzione.
                 </p>
                 <div class="flex items-center gap-8">
                     <a href="#storia" class="text-xs font-bold uppercase tracking-[0.3em] border-b border-brand-gold pb-2 hover:text-brand-gold transition">
@@ -93,7 +106,7 @@
         </div>
     </section>
 
-    <!-- Narrazione: Il Valore dell'Esperienza -->
+    <!-- Narrazione -->
     <section id="storia" class="py-32 bg-brand-sand">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-20">
@@ -103,34 +116,34 @@
             
             <div class="prose prose-lg text-slate-600 font-light mx-auto leading-loose text-justify">
                 <p class="mb-8">
-                    Per quasi due decenni ho vissuto nel cuore della logistica B2B. Non Ë stato solo un lavoro di ufficio: Ë stato imparare a prevedere l'imprevisto, a negoziare con culture diverse e a garantire la stabilit‡ operativa anche nei momenti di transizione pi˘ complessi.
+                    Per quasi due decenni ho vissuto nel cuore del back office internazionale della logistica B2B. Non √® stato solo un lavoro di ufficio: √® stato imparare a prevedere l'imprevisto, a negoziare con culture diverse e a garantire la stabilit√† operativa anche nei momenti di transizione pi√π complessi.
                 </p>
                 <p class="mb-8 p-10 bg-white italic border-l-4 border-brand-gold shadow-sm text-brand-dark font-normal">
-                    "Credo che l'innovazione non serva a sostituire l'esperienza, ma a potenziarla. Oggi uso l'Intelligenza Artificiale come una leva per rendere i processi che conosco a fondo ancora pi˘ fluidi e strategici."
+                    &ldquo;Credo che l'innovazione non serva a sostituire l'esperienza, ma a potenziarla. Oggi uso l'Intelligenza Artificiale come una leva per rendere i processi che conosco a fondo ancora pi√π fluidi e strategici.&rdquo;
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Formazione Accademica e Lingue: Focus Comunicazione Internazionale -->
+    <!-- Formazione Accademica e Lingue -->
     <section id="formazione" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-16 items-start">
                 <div>
                     <h2 class="text-4xl font-bold text-brand-dark mb-8">La forza della <br> <span class="text-brand-gold italic text-5xl serif">Mediazione Culturale</span></h2>
                     <p class="text-slate-600 font-light leading-relaxed mb-6 italic">
-                        "Comunicare non Ë solo trasmettere informazioni, ma creare una sintesi tra mondi diversi."
+                        &ldquo;Comunicare non √® solo trasmettere informazioni, ma creare una sintesi tra mondi diversi.&rdquo;
                     </p>
                     <div class="space-y-6">
                         <div class="border-l-2 border-brand-gold pl-6">
                             <h4 class="font-bold text-brand-dark">Laurea Magistrale</h4>
                             <p class="text-sm text-slate-500">Lingue e Culture per la Comunicazione e la Cooperazione Internazionale</p>
-                            <p class="text-xs text-brand-gold mt-1">Universit‡ degli Studi di Milano</p>
+                            <p class="text-xs text-brand-gold mt-1">Universit√† degli Studi di Milano</p>
                         </div>
                         <div class="border-l-2 border-slate-200 pl-6">
                             <h4 class="font-bold text-slate-700">Laurea Triennale</h4>
                             <p class="text-sm text-slate-400">Mediazione Linguistica e Culturale</p>
-                            <p class="text-xs text-slate-400 mt-1">Universit‡ degli Studi di Milano</p>
+                            <p class="text-xs text-slate-400 mt-1">Universit√† degli Studi di Milano</p>
                         </div>
                     </div>
                 </div>
@@ -138,7 +151,7 @@
                 <div class="bg-brand-sand p-10 rounded-sm border border-brand-peach/30">
                     <h3 class="serif text-3xl italic text-brand-dark mb-8">Oltre i confini</h3>
                     <p class="text-sm text-slate-500 mb-8 font-light">
-                        Il mio percorso accademico Ë lo strumento che mi permette di gestire con consapevolezza il cliente internazionale, integrando competenze linguistiche e sensibilit‡ culturale.
+                        Il mio percorso accademico √® lo strumento che mi permette di gestire con consapevolezza il cliente internazionale, integrando competenze linguistiche e sensibilit√† culturale.
                     </p>
                     <div class="grid grid-cols-2 gap-y-8 gap-x-4">
                         <div class="flex flex-col">
@@ -158,15 +171,12 @@
                             <div class="h-0.5 bg-brand-gold w-full opacity-30"></div>
                         </div>
                     </div>
-                    <div class="mt-12 p-4 bg-white/50 rounded text-xs text-slate-500 italic">
-                        Competenze linguistiche maturate in ambiti professionali e accademici, costantemente applicate nella gestione di mercati UE ed Extra-UE.
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Radici: Musica e Scout -->
+    <!-- Sezione Radici -->
     <section id="radici" class="py-24 bg-subtle-gradient text-brand-dark">
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-20 items-center">
@@ -179,7 +189,7 @@
                             <div>
                                 <h4 class="font-bold text-lg text-brand-dark mb-2">L'armonia organizzativa</h4>
                                 <p class="text-sm text-slate-500 font-light leading-relaxed">
-                                    Gli anni trascorsi come violinista in una band internazionale mi hanno insegnato che dietro un'esecuzione perfetta c'Ë una logistica invisibile: gestione contatti, pianificazione tour e coordinamento di gruppo. Oggi suono per me stessa, ma quel senso del ritmo e della cura del dettaglio rimane in ogni progetto che seguo.
+                                    Gli anni trascorsi come violinista in una band internazionale mi hanno insegnato che dietro un'esecuzione perfetta c'√® una logistica invisibile: gestione contatti, pianificazione tour e coordinamento di gruppo. Oggi suono per me stessa, ma quel senso del ritmo e della cura del dettaglio rimane in ogni progetto che seguo.
                                 </p>
                             </div>
                         </div>
@@ -189,49 +199,39 @@
                             <div>
                                 <h4 class="font-bold text-lg text-brand-dark mb-2">Lo spirito di servizio</h4>
                                 <p class="text-sm text-slate-500 font-light leading-relaxed">
-                                    Il percorso scout, durato vent'anni, ha forgiato il mio carattere. Mi ha insegnato a "lasciare il mondo un po' migliore di come l'ho trovato", traducendosi professionalmente in un'etica del lavoro basata sulla collaborazione, sulla resilienza e sull'autonomia operativa.
+                                    Il percorso scout, durato vent'anni, ha forgiato il mio carattere. Mi ha insegnato a &ldquo;lasciare il mondo un po' migliore di come l'ho trovato&rdquo;, traducendosi professionalmente in un'etica del lavoro basata sulla collaborazione, sulla resilienza e sull'autonomia operativa.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skill Card AI & Ops -->
                 <div class="bg-brand-dark p-12 rounded-sm shadow-2xl relative text-white">
                     <div class="absolute -top-4 -right-4 w-24 h-24 border-t border-right border-brand-gold opacity-30"></div>
                     <h3 class="text-brand-gold serif italic text-3xl mb-8">Competenze integrate</h3>
                     <ul class="space-y-6">
                         <li class="flex justify-between border-b border-white/10 pb-2">
                             <span class="text-white/80 text-sm font-light">Operations Extra-UE</span>
-                            <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Solidit‡</span>
+                            <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Solidit√†</span>
                         </li>
                         <li class="flex justify-between border-b border-white/10 pb-2">
                             <span class="text-white/80 text-sm font-light">AI Workflow & Productivity</span>
                             <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Innovazione</span>
                         </li>
                         <li class="flex justify-between border-b border-white/10 pb-2">
-                            <span class="text-white/80 text-sm font-light">Digital Content Creation</span>
-                            <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Creativit‡</span>
+                            <span class="text-white/80 text-sm font-light">Mediazione Linguistica</span>
+                            <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Relazioni</span>
                         </li>
                     </ul>
-                    <div class="mt-10 flex flex-wrap gap-2">
-                        <span class="text-[9px] px-2 py-1 border border-brand-gold/30 text-brand-gold/80 rounded uppercase">AI Specialist (EQF 5)</span>
-                        <span class="text-[9px] px-2 py-1 border border-brand-gold/30 text-brand-gold/80 rounded uppercase">ChatGPT</span>
-                        <span class="text-[9px] px-2 py-1 border border-brand-gold/30 text-brand-gold/80 rounded uppercase">Claude</span>
-                        <span class="text-[9px] px-2 py-1 border border-brand-gold/30 text-brand-gold/80 rounded uppercase">Canva</span>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contatti -->
+    <!-- Contatti -->
     <section id="contatti" class="py-32 bg-brand-dark text-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="serif text-5xl italic mb-10">Parliamo del futuro.</h2>
-            <p class="text-white/50 mb-16 font-light max-w-xl mx-auto">
-                Sono alla ricerca di un contesto dove poter portare questa sintesi di esperienza e innovazione digitale.
-            </p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
                 <a href="Michela_Paganini_CV.pdf" download class="group">
@@ -253,8 +253,8 @@
     </section>
 
     <footer class="py-8 bg-brand-dark border-t border-white/5 text-center">
-        <p class="text-[8px] text-white/20 uppercase tracking-[0.6em] font-light italic">
-            "Sempre pronti" ó M. Paganini
+        <p class="text-[8px] text-white/20 uppercase tracking-[0.6em] font-light italic text-center w-full">
+            &ldquo;Sempre pronti&rdquo; ‚Äî M. Paganini
         </p>
     </footer>
 
